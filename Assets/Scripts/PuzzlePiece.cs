@@ -24,7 +24,7 @@ public class PuzzlePiece : MonoBehaviour
         _originalPosition = transform.position;
     }
 
-    void Updated()
+    void Update()
     {
         if (_placed) return;
         if (!_dragging) return;
@@ -42,7 +42,7 @@ public class PuzzlePiece : MonoBehaviour
         _offset = GetMousePos() - (Vector2)transform.position;
     }
 
-    void OnNouseUp()
+    void OnMouseUp()
     {
         if (Vector2.Distance(transform.position, _slot.transform.position) < 3)
         {
